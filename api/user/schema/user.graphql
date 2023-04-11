@@ -5,11 +5,12 @@ const userSchema = gql`
     nome: String!
     ativo: Boolean!
     email: String
+ 
   }
 
   type Query {
     users: [User],
-    firstUser: User
+    user(id: ID!) : User
   }
 `;
 
